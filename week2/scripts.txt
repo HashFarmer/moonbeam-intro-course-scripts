@@ -47,6 +47,7 @@ sudo truffle run moonbeam install
 #strat local dev node 
 sudo truffle run moonbeam start
 
+#must be in moonbeam-truffle-box directorys to run such commands
 #check the status of the node
 truffle run moonbeam status
 #or
@@ -60,8 +61,21 @@ truffle run moonbeam stop
 #send tokens and show logs using container id
 sudo docker logs 58fd2620809f
 
+#in truffle-moonbeam-box
+truffle compile --all
+
+#test
+truffle test
+
+#deploy contract no local node
+truffle migrate --network dev --reset
 
 
+#check logs
+sudo docker logs 58fd2620809f
+
+#deploy contract on moonbase
+truffle migrate --network moonbase --reset
 
 
 
